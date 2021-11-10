@@ -6,13 +6,13 @@ import database
 def Calculate():
     bp = int(e_id.get())
     serv = int(e_service.get())
-    total = (bp * serv * 12 * (70 / 3000))
+    totals = (bp * serv * 12 * (70 / 3000))
     commute = (bp * serv * 12 * (70 / 3000)) * (0.03)
     total.delete(0, END)
-    total.insert(END, total)
+    total.insert(END, totals)
     e_commute.delete(0, END)
     e_commute.insert(END, commute)
-    return total, commute
+    return totals, commute
 
 
 def save():
